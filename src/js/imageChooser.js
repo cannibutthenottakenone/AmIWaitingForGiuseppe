@@ -1,4 +1,4 @@
-const baseurl = ".."
+const baseurl = "."
 
 const images = [
 "binoculars-gc83f358ec_1920.jpg",
