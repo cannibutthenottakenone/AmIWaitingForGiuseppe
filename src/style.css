@@ -1,18 +1,29 @@
 html,
 body {
     height: 100%;
+    width: 100%;
     margin: 0px;
-
 }
 
 body {
     font-family: 'Quicksand', sans-serif;
     /*background-color: rgb(0, 0, 0);*/
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 70%
-        /*clamp(50vh 50vw 1000px)*/
-    ;
+}
+
+@media screen and (min-aspect-ratio: 1/1) {
+    body {
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 70%;
+    }
+}
+
+@media screen and (max-aspect-ratio: 1/1) {
+    body {
+        background-repeat: space;
+        background-position: center;
+        background-size: 100%;
+    }
 }
 
 .nowrap {
@@ -47,7 +58,7 @@ body {
 .wideband {
     margin: 0;
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.483);
+    background-color: rgba(255, 255, 255, 0.655);
 }
 
 #mainLine {
@@ -55,7 +66,7 @@ body {
     top: 50%;
     transform: translateY(-50%);
 
-    font-size: clamp(2em, 3vh, 5em)
+    font-size: calc(15px + 1vw);
 }
 
 /* footer {
